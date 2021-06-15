@@ -2,6 +2,7 @@
 ### **BA2 Project INFO-H2001.**
 Simple E-commerce Android app in Kotlin.
 Android Studio IDE, used Floobits for real-time collaboration.
+UML class and sequence diagrams made with app.diagrams.net.
 
 This project is for a 2nd year Bachelor computer science project.
 ### **Ecole Polytechnique de Bruxelles - Université Libre de Bruxelles.**
