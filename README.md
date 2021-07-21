@@ -6,6 +6,9 @@ UML Class and Sequence Diagrams made with app.diagrams.net.
 
 This project is for a 2nd year Bachelor Engineering project, computer science class.
 This was made in less than a week, by a team of 3 students making their very first Android and Kotlin app.
+Project was presented during a Teams meeting with the professor and teaching assistants.
+
+Grade was 16/20 (80%)
 
 _*Note: this project contains both English and French_
 ### **Ecole Polytechnique de Bruxelles - Université Libre de Bruxelles.**
