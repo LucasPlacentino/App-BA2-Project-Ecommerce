@@ -18,6 +18,4 @@ _-Lucas Placentino
 -Charles Zambeaux
 -Matteo Missaire_
 
-![Screenshot_1620639067](https://user-images.githubusercontent.com/23436953/126474762-cec6eb6c-f802-4480-a246-b4d64bc8b354.png)
-![Screenshot_1620639141](https://user-images.githubusercontent.com/23436953/126474766-787c65e6-df82-4cfd-bf48-3b2db07cd38d.png)
-![Screenshot_1620639503](https://user-images.githubusercontent.com/23436953/126474769-a31b13c0-b80c-4b61-aff1-3e5d470b2187.png)
+<img src="https://user-images.githubusercontent.com/23436953/126474762-cec6eb6c-f802-4480-a246-b4d64bc8b354.png" width=30%> <img src="https://user-images.githubusercontent.com/23436953/126474766-787c65e6-df82-4cfd-bf48-3b2db07cd38d.png" width=30%> <img src="https://user-images.githubusercontent.com/23436953/126474769-a31b13c0-b80c-4b61-aff1-3e5d470b2187.png" width=30%>
