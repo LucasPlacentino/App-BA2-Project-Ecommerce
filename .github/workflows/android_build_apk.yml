@@ -77,8 +77,9 @@ jobs:
         files: app/build/outputs/apk/release/app-release-unsigned.apk
         draft: false
         prerelease: false
-        name: Release-${{ github.run_id }}.${{ github.run_attempt }}
+        name: E-Commerce BA2 Project App (Release-${{ github.run_id }}.${{ github.run_attempt }})
         tag_name: ${{ github.run_id }}.${{ github.run_attempt }}-${{ github.ref }}
+        body: App APK
       #env:
       #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
@@ -90,10 +91,3 @@ jobs:
         event-type: released-asset
         client-payload: '{"repourl": "${{ github.repositoryUrl }}"}'
     
-    #- name: Ping - Telling other repo to get this release asset apk and release it there
-    #  run: |
-    #      curl -X POST \
-    #      -H "Authorization: Bearer ${{secrets.ACCESS_TOKEN}}" \
-    #      -H "Accept: application/vnd.github.v3+json" \
-    #      https://api.github.com/repos/lucasplacentino/UNI-ULB/actions/workflows/deploy.yml/dispatches
- 
