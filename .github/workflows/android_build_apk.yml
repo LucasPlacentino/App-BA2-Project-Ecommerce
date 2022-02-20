@@ -1,13 +1,37 @@
 name: Build Android App (CI)
 
 # Triggers
-on: [workflow_dispatch, pull_request, push]
+#on: [workflow_dispatch, pull_request, push]
+on: workflow_dispatch
 
 # Jobs
 jobs:
-  build:
+  test-and-debug:
+    name: Run Tests
     runs-on: ubuntu-latest
-    continue-on-error: true
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+        
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: gradle
+          
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        
+      - name: Run Tests
+        run: bash ./gradlew test --stacktrace
+        
+      #- name: Run Tests
+      #  run: ./gradlew test
+
+  apk:
+    name: Build APK
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout the code
       uses: actions/checkout@v2
@@ -21,24 +45,18 @@ jobs:
         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-
-    - name: Unit tests
-      run: bash ./gradlew test --stacktrace
       
-    - name: Run Tests
-      run: ./gradlew test
+    #- name: Build Project
+    #  run: ./gradlew assemble
       
-    - name: Build Project
-      run: ./gradlew assemble
+    #- name: Build Debug APK
+    #  run: bash ./gradlew :app:assembleDebug
       
-    - name: Build Debug APK
-      run: bash ./gradlew :app:assembleDebug
+    #- name: Build app with gradle
+    #  run: ./gradlew assembleRelease
       
-    - name: build release
-      run: ./gradlew assembleRelease
-      
-    #- name: Build app with Gradle
-    #  run: ./gradlew build
+    - name: Build apk with Gradle
+      run: ./gradlew build
 
     #- name: Sign release APK
     #    uses: r0adkll/sign-android-release@v1
@@ -49,5 +67,16 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
-        name: Release APK
-        path: ${{ github.workspace}} /app/build/outputs/apk/release/app-ba2-project-ecommerce.apk
+        name: apk
+        path: app/build/outputs/apk/release/app-release.apk
+    
+    - name: Release APK
+      uses: softprops/action-gh-release@v1
+      with:
+        files: app/build/outputs/apk/release/app-release-unsigned.apk
+        draft: false
+        prerelease: false
+      #env:
+      #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+ 
