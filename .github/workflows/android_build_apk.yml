@@ -10,17 +10,17 @@ jobs:
     name: Run Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
+      - name: 🔃 Checkout the code
         uses: actions/checkout@v2
         
-      - name: set up JDK 11
+      - name: ⚙️ set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
           
-      - name: Grant execute permission for gradlew
+      - name: ⚙️ Grant execute permission for gradlew
         run: chmod +x gradlew
         
       - name: Run Tests
@@ -33,17 +33,17 @@ jobs:
     name: Build APK
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the code
+    - name: 🔃 Checkout the code
       uses: actions/checkout@v2
       
-    - name: set up JDK 11
+    - name: ⚙️ set up JDK 11
       uses: actions/setup-java@v2
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
         
-    - name: Grant execute permission for gradlew
+    - name: ⚙️ Grant execute permission for gradlew
       run: chmod +x gradlew
       
     #- name: Build Project
@@ -55,7 +55,7 @@ jobs:
     #- name: Build app with gradle
     #  run: ./gradlew assembleRelease
       
-    - name: Build apk with Gradle
+    - name: 🛠️ Build apk with Gradle
       run: ./gradlew build
 
     #- name: Sign release APK
@@ -64,18 +64,19 @@ jobs:
     #    with:
     # TODO
     
-    - name: Upload APK
+    - name: 📢 Upload APK
       uses: actions/upload-artifact@v2
       with:
         name: apk
         path: app/build/outputs/apk/release/app-release.apk
     
-    - name: Release APK
+    - name: 📦 Release APK
       uses: softprops/action-gh-release@v1
       with:
         files: app/build/outputs/apk/release/app-release-unsigned.apk
         draft: false
         prerelease: false
+        tag_name: ${{ github.ref }}
       #env:
       #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
