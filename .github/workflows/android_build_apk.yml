@@ -68,7 +68,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: apk
-        path: app/build/outputs/apk/release/app-release.apk
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
     
     - name: 📦 Release APK
       uses: softprops/action-gh-release@v1
@@ -76,6 +76,7 @@ jobs:
         files: app/build/outputs/apk/release/app-release-unsigned.apk
         draft: false
         prerelease: false
+        name: ${{ fromJSON(steps.<step-id>.outputs.assets)[0].name }} Release ${{ github.ref }}
         tag_name: ${{ github.ref }}
       #env:
       #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
