@@ -1,8 +1,8 @@
 name: Build Android App (CI)
 
 # Triggers
-#on: [workflow_dispatch, pull_request, push]
-on: workflow_dispatch
+on: [workflow_dispatch, pull_request, push]
+#on: workflow_dispatch
 
 # Jobs
 jobs:
