@@ -77,8 +77,8 @@ jobs:
         files: app/build/outputs/apk/release/app-release-unsigned.apk
         draft: false
         prerelease: false
-        name: Release ${{ github.run_id }}.${{ github.run_attempt }}
-        tag_name: ${{ github.run_id }}.${{ github.run_attempt }} ${{ github.ref }}
+        name: Release-${{ github.run_id }}.${{ github.run_attempt }}
+        tag_name: ${{ github.run_id }}.${{ github.run_attempt }}-${{ github.ref }}
       #env:
       #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
