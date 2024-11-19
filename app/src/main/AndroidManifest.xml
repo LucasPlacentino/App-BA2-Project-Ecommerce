@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailsProduit"/>
-        <activity android:name=".Panier"/>
-        <activity android:name=".CommandeTerminee"/>
+        <activity android:name=".DetailsProduit" android:exported="false"/>
+        <activity android:name=".Panier" android:exported="false"/>
+        <activity android:name=".CommandeTerminee" android:exported="false"/>
     </application>
 
 </manifest>

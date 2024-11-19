@@ -1,4 +1,4 @@
-package com.example.testinfoprojet2
+package be.placentino.lucas.testinfoprojet2
 
 import kotlin.collections.ArrayList
 
@@ -7,7 +7,7 @@ class ListeProduits {
     private val listeProduits = arrayListOf<Produit>()
 
     init { // Liste prédeterminée de produits, hard-codée dans l'app (on pourrait l'importer d'un JSON ou une database etc)
-        listeProduits.add(Produit("1","Lunettes de soleil homme", "26.99",R.drawable.sunglasses_giorgio_trovato_unsplash))
+        listeProduits.add(Produit("1","Lunettes de soleil homme", "26.99", R.drawable.sunglasses_giorgio_trovato_unsplash))
         listeProduits.add(Produit("2","Voiture miniature", "11.50",R.drawable.car_giorgio_trovato_unsplash))
         listeProduits.add(Produit("3","Livre", "14.99",R.drawable.book_brett_jordan_unsplash))
         listeProduits.add(Produit("4","Appareil photo", "485.50",R.drawable.camera_subtle_cinematics_unsplash))

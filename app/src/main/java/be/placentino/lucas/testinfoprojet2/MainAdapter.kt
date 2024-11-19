@@ -1,4 +1,4 @@
-package com.example.testinfoprojet2
+package be.placentino.lucas.testinfoprojet2
 
 import android.content.Intent
 import android.view.LayoutInflater

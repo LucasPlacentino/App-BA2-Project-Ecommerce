@@ -1,11 +1,4 @@
-package com.example.testinfoprojet2
-
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.drawable.Drawable
-import android.widget.ImageView
-import java.io.IOException
+package be.placentino.lucas.testinfoprojet2
 
 /*     #TODO    ---    NON UTILISE    ---
 

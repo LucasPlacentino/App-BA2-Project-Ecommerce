@@ -1,4 +1,4 @@
-package com.example.testinfoprojet2
+package be.placentino.lucas.testinfoprojet2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
+import be.placentino.lucas.testinfoprojet2.R
 /* pour les coroutines il faut qu'il y ait bien dans les dépendances dans gradle.build les implémentations
       'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
   et
