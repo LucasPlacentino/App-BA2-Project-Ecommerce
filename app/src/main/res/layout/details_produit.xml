@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="Nom du produit"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="30sp"/>
 
     <ImageView
@@ -30,6 +30,7 @@
 
     <TextView
         android:id="@+id/priceDetails"
+        android:textColor="#777777"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Ajouter au panier"
         android:textSize="25sp"
+        android:textColor="@color/white"
         android:backgroundTint="@color/purple_500"
         app:layout_constraintStart_toStartOf="@+id/nomProduit"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,6 +57,7 @@
         android:layout_height="wrap_content"
         android:text="Panier"
         android:textSize="25sp"
+        android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>

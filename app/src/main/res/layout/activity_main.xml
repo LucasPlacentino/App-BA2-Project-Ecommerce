@@ -24,6 +24,7 @@
         android:layout_marginLeft="8dp"
         android:text="Panier"
         android:textSize="25sp"
+        android:textColor="@color/white"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
