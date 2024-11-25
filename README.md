@@ -1,4 +1,8 @@
 # App-BA2-Project-Ecommerce
+https://play.google.com/store/apps/details?id=be.placentino.lucas.testinfoprojet2&pcampaignid=web_share
+
+Product images are free-to-use, from [Unsplash](https://unsplash.com/).
+
 ### **BA2 Project INFO-H2001.**
 Simple E-commerce Android app in Kotlin.
 Android Studio IDE, used Floobits for real-time collaboration.
